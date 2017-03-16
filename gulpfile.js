@@ -27,6 +27,9 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/freewall/freewall.js',
+		'app/libs/lazyload/jquery.lazyload.min.js',
+		'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
