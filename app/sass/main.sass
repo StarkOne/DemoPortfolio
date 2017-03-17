@@ -65,10 +65,20 @@ body
 		width: 300px
 		.user_info
 			opacity: 1
+		.btn_mnu
+			background: transparent
+		.aside_content
+			nav
+				margin-top: 35px
+			li
+				a
+					&:before
+						margin-left: -32px
 //кнопка
 .btn_mnu
 	width: 50px
 	height: 50px
+	transition: all .5s
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -112,10 +122,58 @@ body
 	top: 50px
 	padding: 25px 0px
 	width: 100%
+	ul,li
+		margin: 0
+		padding: 0
+		list-style: none
+	li
+		a
+			&:before
+				font-family: "linea-basic-10"
+				margin-left: -58px
+				font-size: 25px
+				line-height: 0
+				transition: all .5s
+				margin-right: 15px
+				margin-top: -4px
+				display: inline-block
+				vertical-align: middle
+		&:nth-child(1)
+			a
+				&:before
+					content: "u"
+		&:nth-child(2)
+			a
+				&:before
+					content: "{"
+		&:nth-child(3)
+			a
+				&:before
+					content: "R"
+		a
+			color: #b2b2b2
+			background-color: #111
+			display: block
+			padding: 10px 0px 10px 70px
+			border-bottom: #212121 1px solid
+			white-space: nowrap
+			transition: all .5s
+			&:first-child
+				border-top: #212121 1px solid
+			&:hover
+				text-decoration: none
+				background: tomato
+				color: #fff
+	nav
+		margin: 35px 0px
+		margin-top: -110px
+		transition: all .5s
+		position: relative
+		z-index: 5
 .user_info
 	text-align: center
 	opacity: 0
-	transition: all .35s
+	transition: all .2s
 	white-space: nowrap
 	img
 		width: 120px
@@ -130,4 +188,27 @@ body
 	letter-spacing: 1px
 	color: #434343
 	font-family: $default-font
+.loader
+  background: none repeat scroll 0 0 #ffffff
+  bottom: 0
+  height: 100%
+  left: 0
+  position: fixed
+  right: 0
+  top: 0
+  width: 100%
+  z-index: 9999
+  .loader_inner
+    background-image: url("../img/preloader.gif")
+    background-size: cover
+    background-repeat: no-repeat
+    background-posirion: center center
+    background-color: #fff
+    height: 60px
+    width: 60px
+    margin-top: -30px
+    margin-left: -30px
+    left: 50%
+    top: 50%
+    position: absolute
 @import "media" // Всегда в концеFFF
